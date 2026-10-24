@@ -27,7 +27,7 @@ Made for the Advanced Web Technologies course (Project 2).
 
 1. Clone or download this repository.
 2. Get a free API key from [OpenWeatherMap](https://openweathermap.org/api).
-3. Copy `config.example.js` and rename the copy to `config.js`.
+3. Copy `config.try.js` and rename the copy to `config.js`.
 4. Open `config.js` and replace `PUT_YOUR_API_KEY_HERE` with your key.
 5. Open the folder in VS Code and run `index.html` with the Live Server extension.
 
