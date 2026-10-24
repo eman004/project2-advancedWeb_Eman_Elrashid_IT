@@ -281,6 +281,12 @@ body {
   color: var(--muted);
 }
 
+.day:hover .day-temp {
+  color: var(--amber-dark);
+}
+.fav-name:hover {
+  text-decoration: underline;
+}
 @media (max-width: 480px) {
   .search-btn { padding: 11px 16px; }
   .hero { padding-bottom: 56px; }
