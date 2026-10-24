@@ -63,7 +63,7 @@ async function findCoords(name) {
   const url = GEO_URL + "?q=" + encodeURIComponent(name) + "&format=json&limit=1";
   const data = await getJSON(url);
   if (data.length === 0) {
-    throw new Error("Sorry, I couldn't find \"" + name + "\". Try another spelling?");
+    throw new Error("Sorry, I can't find \"" + name + "\". Maybe its a spelling error");
   }
   return {
     lat: Number(data[0].lat),
@@ -188,7 +188,7 @@ async function search(name) {
     refreshFavBtn();
   } catch (err) {
     if (err instanceof TypeError) {
-      showError("Couldn't reach the server. Check your internet connection.");
+      showError("Couldn't reach the server.  please check your internet connection.");
     } else {
       showError(err.message);
     }
