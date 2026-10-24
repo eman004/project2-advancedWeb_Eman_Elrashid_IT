@@ -58,6 +58,7 @@ async function getJSON(url) {
   return res.json();
 }
 
+// asks for the lat/lon of the place the user typed
 async function findCoords(name) {
   const url = GEO_URL + "?q=" + encodeURIComponent(name) + "&format=json&limit=1";
   const data = await getJSON(url);
@@ -75,7 +76,7 @@ function weatherUrl(base, lat, lon) {
   return base + "?lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + API_KEY;
 }
 
-
+// builds the weather box that shows inside the map popup
 function makePopup(w, title) {
   const box = document.createElement("div");
 
@@ -105,6 +106,7 @@ function makePopup(w, title) {
   return box;
 }
 
+// the api gives a reading every 3 hours so I group them by day here
 function showForecast(data) {
   // the api gives a reading every 3 hours, so group them by date first
   const byDay = {};
